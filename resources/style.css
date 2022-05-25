@@ -1,0 +1,255 @@
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+}
+/* GENERAL */
+
+/* HEADER */
+header {
+    display: block;
+    padding: 10px 5%;
+    width: 90%;
+    background-color: #dddddd;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav > a {
+    display: inline-block;
+    line-height: 0;
+}
+
+header nav > a img {
+    width: 80px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 10px;
+}
+
+header nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+
+header nav ul li a:hover {
+    background-color: #bbbbbb;
+}
+
+header nav ul li a#actual {
+    background-color: #bbbbbb;
+}
+/* HEADER */
+
+/* MAIN */
+main {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+}
+
+main h1 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 42px;
+}
+
+main h2 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+main h3 {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+main h3.new {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #0055ff;
+}
+
+main h3.new:hover {
+    text-decoration: underline;
+}
+
+main hr {
+    margin: 10px 0;
+}
+
+main p {
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+main span {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+/* MAIN */
+
+/* ASIDE */
+aside {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    width: 500px;
+}
+
+aside form {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 90%;
+    width: 500px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #dddddd;
+}
+
+aside form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+aside form input {
+    display: inline-block;
+    margin: 0 auto 10px auto;
+    width: 99%;
+}
+
+aside form input[type="submit"] {
+    margin: 5px 0;
+    padding: 2px;
+    width: 100%;
+}
+
+aside form button {
+    margin: 5px 0;
+    padding: 2px;
+    width: 100%;
+}
+
+aside form button a {
+    display: block;
+    width: 100%;
+}
+
+aside div a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #0055ff;
+}
+
+aside div a:hover {
+    text-decoration: underline;
+}
+/* ASIDE */
+
+/* FORM */
+summary {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+form.new {
+    display: block;
+    margin-bottom: 30px;
+    padding: 15px;
+    max-width: 100%;
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #dddddd;
+}
+
+form.new select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form.new label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.new input {
+    display: inline-block;
+    margin: 0 auto 10px auto;
+    width: 99%;
+}
+
+form.new textarea {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 99%;
+    max-height: 100px;
+    width: 99%;
+    height: 100px;
+}
+
+form.new input[type="submit"], form.new input[type="reset"] {
+    margin: 5px 0;
+    padding: 2px;
+    width: 100%;
+}
+/* FORM */
+
+/* TABLE */
+table, tr, th, td {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    background-color: #dddddd;
+}
+
+table {
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100%;
+}
+
+table form input[type="submit"] {
+    margin: 5px 0;
+    padding: 2px;
+}
+
+table th, table td {
+    padding: 5px;
+}
+
+table td {
+    background-color: #ffffff;
+}
+/* TABLE */
