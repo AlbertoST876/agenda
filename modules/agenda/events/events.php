@@ -3,15 +3,15 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 12-04-2022 02:18:57
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 13-04-2022 03:33:17
+ * @ Modified time: 31-05-2022 13:00:47
  * @ Description: Función que muestra los eventos de determinado usuario
  */
 
 /**
  * Obtiene los eventos categorizados de un usuario
  *
- * @param Int $usuario
- * @return Void
+ * @param int $usuario
+ * @return void
  */
 function ObtenerEventosUsuario($usuario) {
     include "./modules/db/db.php";
@@ -31,10 +31,10 @@ function ObtenerEventosUsuario($usuario) {
 /**
  * Obtiene los eventos de una categoría y de un usuario especificado
  *
- * @param Mysqli $connect
- * @param Int $usuario
- * @param Int $categoria
- * @return Void
+ * @param mysqli $connect
+ * @param int $usuario
+ * @param int $categoria
+ * @return void
  */
 function ObtenerEventosCategoria($connect, $usuario, $categoria) {
     $SQL = "SELECT id, nombre, descripcion, DATE_FORMAT(fecha, '%d/%m/%Y') AS fechaESP FROM events WHERE usuario = '$usuario' AND categoria = '$categoria'";

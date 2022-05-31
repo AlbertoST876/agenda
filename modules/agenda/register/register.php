@@ -3,17 +3,17 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 03-04-2022 13:39:53
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 12-04-2022 02:02:01
+ * @ Modified time: 31-05-2022 13:02:29
  * @ Description: Funciones que registran al usuario en la base de datos
  */
 
 /**
  * Registra al usuario en la base de datos
  *
- * @param String $nombre
- * @param String $contraseña
- * @param String $email
- * @return Array|Void
+ * @param string $nombre
+ * @param string $contraseña
+ * @param string $email
+ * @return array|void
  */
 function RegistrarUsuario($nombre, $contraseña, $email) {
     include "./modules/db/db.php";
@@ -48,9 +48,9 @@ function RegistrarUsuario($nombre, $contraseña, $email) {
 /**
  * Comprueba si existe un usuario con el mismo nombre introducido, si no hay coincidencias devuelve true
  *
- * @param Mysqli $connect
- * @param String $nombre
- * @return Bool
+ * @param mysqli $connect
+ * @param string $nombre
+ * @return bool
  */
 function EstaLibreNombreUsuario($connect, $nombre) {
     $SQL = "SELECT username FROM users WHERE username = '$nombre'";
@@ -62,9 +62,9 @@ function EstaLibreNombreUsuario($connect, $nombre) {
 /**
  * Si el registro se ha llevado con éxito, devuelve la información del usuario
  *
- * @param Mysqli $connect
- * @param String $nombre
- * @return Array
+ * @param mysqli $connect
+ * @param string $nombre
+ * @return array
  */
 function ObtenerUsuarioPorNombre($connect, $nombre) {
     $SQL = "SELECT id, username, email FROM users WHERE username = '$nombre'";
@@ -76,9 +76,9 @@ function ObtenerUsuarioPorNombre($connect, $nombre) {
 /**
  * Devuelve la información del usuario por su id
  *
- * @param Mysqli $connect
- * @param Int $id
- * @return Array
+ * @param mysqli $connect
+ * @param int $id
+ * @return array
  */
 function ObtenerUsuarioPorID($connect, $id) {
     $SQL = "SELECT id, username, email FROM users WHERE id = '$id'";

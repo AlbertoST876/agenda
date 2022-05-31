@@ -5,7 +5,7 @@
 -- Servidor: localhost
 -- Tiempo de generación: 23-05-2022 a las 17:56:48
 -- Versión del servidor: 8.0.28
--- Versión de PHP: 8.1.4
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

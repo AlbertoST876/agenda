@@ -3,19 +3,19 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:35
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 13-04-2022 03:29:00
+ * @ Modified time: 31-05-2022 13:01:55
  * @ Description: Funciones para insertar un nuevo evento en la base de datos
  */
 
 /**
  * Inserta en la base de datos un nuevo evento
  *
- * @param Int $id
- * @param Int $category
- * @param String $nombre
- * @param String $descripcion
- * @param String $recordar
- * @return Array|Void
+ * @param int $id
+ * @param int $category
+ * @param string $nombre
+ * @param string $descripcion
+ * @param string $recordar
+ * @return array|void
  */
 function NuevoEvento($id, $category, $nombre, $descripcion, $recordar) {
     include "./modules/db/db.php";
@@ -43,7 +43,7 @@ function NuevoEvento($id, $category, $nombre, $descripcion, $recordar) {
 /**
  * Devuelve las categorías de los eventos
  *
- * @return Void
+ * @return void
  */
 function ObtenerListaCategorias() {
     include "./modules/db/db.php";

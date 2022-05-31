@@ -3,16 +3,16 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:34
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 12-04-2022 02:01:19
+ * @ Modified time: 31-05-2022 13:01:33
  * @ Description: Funciones para el usuario poder iniciar sesión
  */
 
 /**
  * Inicia la sesión del usuario
  *
- * @param String $nombre
- * @param String $contraseña
- * @return Array
+ * @param string $nombre
+ * @param string $contraseña
+ * @return array
  */
 function IniciarSesion($nombre, $contraseña) {
     include "./modules/db/db.php";
@@ -50,9 +50,9 @@ function IniciarSesion($nombre, $contraseña) {
 /**
  * Comprueba si el usuario es único y correcto
  *
- * @param Mysqli $connect
- * @param String $nombre
- * @return Bool
+ * @param mysqli $connect
+ * @param string $nombre
+ * @return bool
  */
 function EsCorrectoUsuario($connect, $nombre) {
     $SQL = "SELECT username FROM users WHERE username = '$nombre'";
@@ -64,10 +64,10 @@ function EsCorrectoUsuario($connect, $nombre) {
 /**
  * Comprueba si la contraseña del usuario es correcta
  * 
- * @param Mysqli $connect
- * @param String $nombre
- * @param String $contraseña
- * @return Bool
+ * @param mysqli $connect
+ * @param string $nombre
+ * @param string $contraseña
+ * @return bool
  */
 function EsCorrectaContraseña($connect, $nombre, $contraseña) {
     $SQL = "SELECT password FROM users WHERE username = '$nombre'";
@@ -80,9 +80,9 @@ function EsCorrectaContraseña($connect, $nombre, $contraseña) {
 /**
  * Actualiza en la base de datos el ultimo acceso del usuario
  *
- * @param Mysqli $connect
- * @param Int $id
- * @param String $date
+ * @param mysqli $connect
+ * @param int $id
+ * @param string $date
  * @return void
  */
 function ActualizarUltimoAcceso($connect, $id, $date) {
