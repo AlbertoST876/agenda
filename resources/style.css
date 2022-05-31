@@ -182,6 +182,7 @@ aside div a:hover {
 summary {
     display: inline-block;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 form.new {
