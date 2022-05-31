@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 03-04-2022 13:39:53
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 31-05-2022 13:03:51
+ * @ Modified time: 31-05-2022 13:28:40
  * @ Description: Lógica de la agenda para poder funcionar correctamente
  */
 
@@ -24,7 +24,6 @@ if (isset($_POST["borrar"])) {
 }
 
 if (!isset($usuario) || empty($usuario)) {
-    echo "<span>Para acceder a tu Agenda antes debes Iniciar Sesión</span>";
     include "./modules/agenda/login/login_form.php";
 } else {
     //Obtener Credenciales de Usuario
