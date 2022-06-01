@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:35
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 31-05-2022 13:01:55
+ * @ Modified time: 01-06-2022 08:57:05
  * @ Description: Funciones para insertar un nuevo evento en la base de datos
  */
 
@@ -33,7 +33,7 @@ function NuevoEvento($id, $category, $nombre, $descripcion, $recordar) {
         if ($result) {
             return ObtenerUsuarioPorID($connect, $id);
         } else {
-            echo "<span>Ha ocurrido un error, intentalo de nuevo más tarde</span>";
+            echo "<span>Ha ocurrido un error, inténtalo de nuevo más tarde</span>";
         }
     }
 

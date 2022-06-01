@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 03-04-2022 13:39:53
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 31-05-2022 13:02:29
+ * @ Modified time: 01-06-2022 09:01:45
  * @ Description: Funciones que registran al usuario en la base de datos
  */
 
@@ -35,7 +35,7 @@ function RegistrarUsuario($nombre, $contraseña, $email) {
 
                 return ObtenerUsuarioPorNombre($connect, $nombre);
             } else {
-                echo "<span>Ha ocurrido un error, intentalo de nuevo mas tarde</span>";
+                echo "<span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>";
             }
         } else {
             echo "<span>Ya existe este nombre de usuario, por favor utiliza otro distinto</span>";

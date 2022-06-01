@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 12-04-2022 02:18:57
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 31-05-2022 13:00:47
+ * @ Modified time: 01-06-2022 08:55:54
  * @ Description: Función que muestra los eventos de determinado usuario
  */
 
@@ -71,7 +71,7 @@ function ObtenerEventosCategoria($connect, $usuario, $categoria) {
         } else {
             echo "
                 <tr>
-                    <td colspan='4'>Ha ocurrido un error, intentalo de nuevo más tarde</td>
+                    <td colspan='4'>Ha ocurrido un error, inténtalo de nuevo más tarde</td>
                 </tr>
             ";
         }
