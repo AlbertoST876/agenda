@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 12-04-2022 02:18:57
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 08:55:54
+ * @ Modified time: 01-06-2022 11:39:05
  * @ Description: Función que muestra los eventos de determinado usuario
  */
 
@@ -13,7 +13,7 @@
  * @param int $usuario
  * @return void
  */
-function ObtenerEventosUsuario($usuario) {
+function ObtenerEventosUsuario(int $usuario):void {
     include "./modules/db/db.php";
 
     $SQL = "SELECT * FROM categories";
@@ -36,7 +36,7 @@ function ObtenerEventosUsuario($usuario) {
  * @param int $categoria
  * @return void
  */
-function ObtenerEventosCategoria($connect, $usuario, $categoria) {
+function ObtenerEventosCategoria(mysqli $connect, int $usuario, int $categoria):void {
     $SQL = "SELECT id, nombre, descripcion, DATE_FORMAT(fecha, '%d/%m/%Y') AS fechaESP FROM events WHERE usuario = '$usuario' AND categoria = '$categoria'";
     $result = mysqli_query($connect, $SQL);
 

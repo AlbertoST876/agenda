@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 23-05-2022 10:05:58
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 09:25:29
+ * @ Modified time: 01-06-2022 11:41:38
  * @ Description: Librería en cargada de notificar por correo
  */
 
@@ -12,7 +12,7 @@
  *
  * @return void
  */
-function NotificarPorCorreo() {
+function NotificarPorCorreo():void {
     // Conexión a la Base de Datos
     include "../db/db.php";
 
@@ -46,7 +46,7 @@ function NotificarPorCorreo() {
  * @param int $id
  * @return string
  */
-function ObtenerEmailUsuario($connect, $id) {
+function ObtenerEmailUsuario(mysqli $connect, int $id):string {
     $SQL = "SELECT email FROM users WHERE id = '$id'";
     $result = mysqli_query($connect, $SQL);
     $row = mysqli_fetch_assoc($result);
@@ -62,7 +62,7 @@ function ObtenerEmailUsuario($connect, $id) {
  * @param string $cuerpo
  * @return string
  */
-function EnviarCorreo($destino, $asunto, $cuerpo) {
+function EnviarCorreo(string $destino, string $asunto, string $cuerpo):string {
     return mail($destino, $asunto, $cuerpo) ? "Enviado" : "Error";
 }
 

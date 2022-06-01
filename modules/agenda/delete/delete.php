@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:34
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 08:56:01
+ * @ Modified time: 01-06-2022 11:38:29
  * @ Description: Función que elimina un evento de la base de datos
  */
 
@@ -14,7 +14,7 @@
  * @param int $evento
  * @return array|void
  */
-function BorrarEvento($id, $evento) {
+function BorrarEvento(int $id, int $evento):array {
     include "./modules/db/db.php";
 
     $SQL = "DELETE FROM events WHERE (id = '$evento')";

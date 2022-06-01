@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:34
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 08:56:30
+ * @ Modified time: 01-06-2022 11:40:16
  * @ Description: Funciones para el usuario poder iniciar sesión
  */
 
@@ -14,7 +14,7 @@
  * @param string $contraseña
  * @return array
  */
-function IniciarSesion($nombre, $contraseña) {
+function IniciarSesion(string $nombre, string $contraseña):array {
     include "./modules/db/db.php";
 
     if (empty($nombre) || empty($contraseña)) {
@@ -54,7 +54,7 @@ function IniciarSesion($nombre, $contraseña) {
  * @param string $nombre
  * @return bool
  */
-function EsCorrectoUsuario($connect, $nombre) {
+function EsCorrectoUsuario(mysqli $connect, string $nombre):bool {
     $SQL = "SELECT username FROM users WHERE username = '$nombre'";
     $result = mysqli_query($connect, $SQL);
 
@@ -69,7 +69,7 @@ function EsCorrectoUsuario($connect, $nombre) {
  * @param string $contraseña
  * @return bool
  */
-function EsCorrectaContraseña($connect, $nombre, $contraseña) {
+function EsCorrectaContraseña(mysqli $connect, string $nombre, string $contraseña):bool {
     $SQL = "SELECT password FROM users WHERE username = '$nombre'";
     $result = mysqli_query($connect, $SQL);
     $row = mysqli_fetch_assoc($result);
@@ -85,7 +85,7 @@ function EsCorrectaContraseña($connect, $nombre, $contraseña) {
  * @param string $date
  * @return void
  */
-function ActualizarUltimoAcceso($connect, $id, $date) {
+function ActualizarUltimoAcceso(mysqli $connect, int $id, string $date):void {
     $SQL = "UPDATE users SET ultimoacceso = '$date' WHERE id = '$id'";
     mysqli_query($connect, $SQL);
 }

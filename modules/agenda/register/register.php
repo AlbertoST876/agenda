@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 03-04-2022 13:39:53
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 09:01:45
+ * @ Modified time: 01-06-2022 11:42:25
  * @ Description: Funciones que registran al usuario en la base de datos
  */
 
@@ -15,7 +15,7 @@
  * @param string $email
  * @return array|void
  */
-function RegistrarUsuario($nombre, $contraseña, $email) {
+function RegistrarUsuario(string $nombre, string $contraseña, string $email):array {
     include "./modules/db/db.php";
 
     if (empty($nombre) || empty($contraseña) || empty($email)) {
@@ -52,7 +52,7 @@ function RegistrarUsuario($nombre, $contraseña, $email) {
  * @param string $nombre
  * @return bool
  */
-function EstaLibreNombreUsuario($connect, $nombre) {
+function EstaLibreNombreUsuario(mysqli $connect, string $nombre):bool {
     $SQL = "SELECT username FROM users WHERE username = '$nombre'";
     $result = mysqli_query($connect, $SQL);
 
@@ -66,7 +66,7 @@ function EstaLibreNombreUsuario($connect, $nombre) {
  * @param string $nombre
  * @return array
  */
-function ObtenerUsuarioPorNombre($connect, $nombre) {
+function ObtenerUsuarioPorNombre(mysqli $connect, string $nombre):array {
     $SQL = "SELECT id, username, email FROM users WHERE username = '$nombre'";
     $result = mysqli_query($connect, $SQL);
     
@@ -80,7 +80,7 @@ function ObtenerUsuarioPorNombre($connect, $nombre) {
  * @param int $id
  * @return array
  */
-function ObtenerUsuarioPorID($connect, $id) {
+function ObtenerUsuarioPorID(mysqli $connect, int $id):array {
     $SQL = "SELECT id, username, email FROM users WHERE id = '$id'";
     $result = mysqli_query($connect, $SQL);
     
