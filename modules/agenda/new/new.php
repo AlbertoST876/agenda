@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:35
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 11:40:52
+ * @ Modified time: 04-06-2022 13:33:53
  * @ Description: Funciones para insertar un nuevo evento en la base de datos
  */
 
@@ -15,7 +15,7 @@
  * @param string $nombre
  * @param string $descripcion
  * @param string $recordar
- * @return array|void
+ * @return array
  */
 function NuevoEvento(int $id, int $category, string $nombre, string $descripcion, string $recordar):array {
     include "./modules/db/db.php";
@@ -38,6 +38,8 @@ function NuevoEvento(int $id, int $category, string $nombre, string $descripcion
     }
 
     mysqli_close($connect);
+
+    return [];
 }
 
 /**

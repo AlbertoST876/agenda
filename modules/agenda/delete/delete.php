@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:34
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 11:38:29
+ * @ Modified time: 04-06-2022 13:32:12
  * @ Description: Función que elimina un evento de la base de datos
  */
 
@@ -27,6 +27,8 @@ function BorrarEvento(int $id, int $evento):array {
     }
 
     mysqli_close($connect);
+
+    return [];
 }
 
 ?>

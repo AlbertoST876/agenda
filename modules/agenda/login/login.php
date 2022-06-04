@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 04-04-2022 22:47:34
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 11:40:16
+ * @ Modified time: 04-06-2022 13:31:10
  * @ Description: Funciones para el usuario poder iniciar sesión
  */
 
@@ -45,6 +45,8 @@ function IniciarSesion(string $nombre, string $contraseña):array {
     }
 
     mysqli_close($connect);
+
+    return [];
 }
 
 /**

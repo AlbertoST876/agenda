@@ -3,7 +3,7 @@
  * @ Author: Alberto Sanchez Torreblanca
  * @ Create Time: 03-04-2022 13:39:53
  * @ Modified by: Alberto Sanchez Torreblanca
- * @ Modified time: 01-06-2022 11:42:25
+ * @ Modified time: 04-06-2022 13:34:37
  * @ Description: Funciones que registran al usuario en la base de datos
  */
 
@@ -13,7 +13,7 @@
  * @param string $nombre
  * @param string $contraseña
  * @param string $email
- * @return array|void
+ * @return array
  */
 function RegistrarUsuario(string $nombre, string $contraseña, string $email):array {
     include "./modules/db/db.php";
@@ -43,6 +43,8 @@ function RegistrarUsuario(string $nombre, string $contraseña, string $email):ar
     }
 
     mysqli_close($connect);
+
+    return [];
 }
 
 /**
