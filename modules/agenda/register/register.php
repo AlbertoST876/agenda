@@ -31,8 +31,6 @@ function RegistrarUsuario(string $nombre, string $contraseña, string $email):ar
             $result = mysqli_query($connect, $SQL);
 
             if ($result) {
-                mysqli_close($connect);
-
                 return ObtenerUsuarioPorNombre($connect, $nombre);
             } else {
                 echo "<span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>";
